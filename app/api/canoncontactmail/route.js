@@ -1,0 +1,31 @@
+import nodemailer from "nodemailer";
+
+export async function POST(req) {
+  try {
+    const { name, email, message } = await req.json();
+
+    if (!name || !email || !message) {
+      return new Response(JSON.stringify({ success: false, error: "Missing fields" }), { status: 400 });
+    }
+
+    let transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.MAIL_CONTACT_USER,
+        pass: process.env.MAIL_CONTACT_PASS,
+      },
+    });
+
+    await transporter.sendMail({
+      from: `"Contact Form" <${process.env.MAIL_CONTACT_USER}>`,
+      to: process.env.MAIL_CONTACT_TO,
+      subject: "New Contact CANON Form Submission",
+      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+    });
+
+    return new Response(JSON.stringify({ success: true }), { status: 200 });
+  } catch (error) {
+    console.error("Mail error:", error);
+    return new Response(JSON.stringify({ success: false, error: error.message }), { status: 500 });
+  }
+}
