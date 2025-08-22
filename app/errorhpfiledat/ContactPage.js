@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 export default function ContactPage() {
@@ -67,7 +68,7 @@ export default function ContactPage() {
             </div>
             <div className="h-10 w-10">
               {/* top-right hp logo placeholder */}
-              <img
+              <Image
                 src="../../images/hplogo.png"
                 alt="HP"
                 className="h-10 w-10 object-contain"
@@ -79,7 +80,7 @@ export default function ContactPage() {
           <div className="p-4">
             <div className="relative rounded-md border border-gray-200 bg-white p-4">
               {/* Example visual (replace src with your own screenshot if needed) */}
-              <img
+              <Image
                 src="https://res.cloudinary.com/dqxcmae0m/image/upload/v1754680007/Canon-G3200-All-In-One-Wireless-Supertank-99x52_fhi3ko.jpg"
                 alt="Printer"
                 className="mx-auto h-28 w-auto opacity-80"
@@ -94,7 +95,7 @@ export default function ContactPage() {
               {/* Blue assistance footer strip */}
               <div className="mt-6 flex items-center justify-between rounded-md bg-[#1787d6] p-3 text-white">
                 <div className="flex items-center gap-3">
-                  <img
+                  <Image
                    src="../../images/hplogow.png"
                     alt="HP"
                     className="h-6 w-6 invert-0"
