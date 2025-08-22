@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ButtonLink from "../ButtonLink";
+import Image from "next/image";
 const Header = () => {
     return (
        <>
@@ -7,7 +8,7 @@ const Header = () => {
   <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
     <div className="flex lg:flex-1">
       <a href="#" className="-m-1.5 p-1.5">
-        <img src="https://res.cloudinary.com/dqxcmae0m/image/upload/v1754680007/Canon-G3200-All-In-One-Wireless-Supertank-99x52_fhi3ko.jpg" alt="" className="h-8 w-auto" />
+        <Image src="https://res.cloudinary.com/dqxcmae0m/image/upload/v1754680007/Canon-G3200-All-In-One-Wireless-Supertank-99x52_fhi3ko.jpg" alt="" className="h-8 w-auto" />
       </a>
     </div>
     <div className="flex lg:hidden">
@@ -38,7 +39,7 @@ const Header = () => {
           <div className="flex items-center justify-between">
             <Link href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt="" className="h-8 w-auto" />
+              <Image src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt="" className="h-8 w-auto" />
             </Link>
             <button type="button" command="close" commandfor="mobile-menu" className="-m-2.5 rounded-md p-2.5 text-gray-700">
               <span className="sr-only">Close menu</span>

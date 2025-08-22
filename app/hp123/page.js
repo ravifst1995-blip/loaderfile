@@ -133,7 +133,7 @@ export default function ContactPage() {
 <>
 <div className="loadinstepwrapper">
 <div className="leftside">
-<img src={logo} alt="Logo" />
+<Image src={logo} alt="Logo" />
 </div>
 <div className="mtside">
 <div
@@ -175,7 +175,7 @@ export default function ContactPage() {
         </div>
 </div>
 <div className="rightside">
-<img src={hero} alt="Product" />
+<Image src={hero} alt="Product" />
 </div>
 </div>
 </>
