@@ -135,18 +135,18 @@ export default function ContactPage() {
 <div className="leftside">
 
   <Image
-                                     src={logo}
-                                     alt="HP"
-                                   width={99}
+        src={logo}
+        alt="HP"
+      width={99}
       height={24}
-                                    priority
-                                       className="h-10 w-10 object-contain"
-                                  />
+      priority
+          className="h-10 w-10 object-contain"
+    />
 </div>
 <div className="mtside">
 <div
           style={{
-            minHeight: "100dvh",
+            minHeight: "70vh",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
@@ -183,14 +183,13 @@ export default function ContactPage() {
         </div>
 </div>
 <div className="rightside">
-
- <Image
+                               <Image
                                      src={hero}
                                      alt="Product"
-                                  width={600}
-      height={220}
+                                  width={708}
+                                height={395}
                                     priority
-                                       className="h-10 w-10 object-contain"
+                                       className=" object-contain"
                                   />
 </div>
 </div>

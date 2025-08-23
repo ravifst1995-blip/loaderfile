@@ -4,9 +4,9 @@ import Link from "next/link";
 
 const brands = [
   { name: "HP",      logo: "/images/hp.webp",      href: "/hp123" },
-  { name: "Canon",   logo: "/images/canon.webp",   href: "/canon" },
-  { name: "EPSON",   logo: "/images/epson.webp",   href: "/epson" },
-  { name: "brother", logo: "/images/brother.webp", href: "/brother" },
+  { name: "Canon",   logo: "/images/canon.webp",   href: "/printer-model" },
+  { name: "EPSON",   logo: "/images/epson.webp",   href: "/epson-net" },
+  { name: "brother", logo: "/images/br-1.webp", href: "/brother-printer" },
 ];
 
 export default function DriverHero() {

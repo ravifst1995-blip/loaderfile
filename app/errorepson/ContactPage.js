@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 export default function ContactPage() {
@@ -19,7 +20,7 @@ export default function ContactPage() {
     setSuccess(false);
 
     try {
-      const res = await fetch("/api/hpcontactmail", {
+      const res = await fetch("/api/epsoncontsct", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -27,8 +28,8 @@ export default function ContactPage() {
 
       const data = await res.json();
       if (data.success) {
-        setSuccess(true);         // ✅ show success message
-        setFormData({ name: "", email: "", message: "" }); // clear form
+        setSuccess(true);    
+        setFormData({ name: "", email: "", message: "" }); 
       } else {
         setError("Failed to send message.");
       }
@@ -38,11 +39,41 @@ export default function ContactPage() {
     } finally {
       setLoading(false);
     }
-  };
+  }; 
 
   return (
-    <div style={{ maxWidth: "500px", margin: "50px auto" }}>
-      <h2>Contact Us</h2>
+    <main className="min-h-screen bg-[#f5f7fb] py-8">
+      {/* Return to top bar */}
+      <div className="mx-auto max-w-4xl px-4">
+        <details className="group mb-4 w-fit cursor-pointer select-none text-sm font-semibold text-gray-900">
+          <summary className="flex items-center gap-2 list-none">
+            <span className="inline-block rounded-sm border border-gray-300 bg-white p-1">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-4 w-4 transition-transform group-open:-rotate-90">
+                <path d="M8 10l4-4 4 4" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </span>
+            Return To Top
+          </summary>
+        </details>
+      </div>
+
+      {/* Top card: Installing + error preview image */}
+      <section className="mx-auto max-w-4xl px-4">
+        <div className="">
+         <Image
+                                    src="/images/epson-error.jpg"
+                                     alt="HP"
+                                    width={837}
+                                     height={598}
+                                    priority
+                                       className="object-contain"
+                                  />
+        </div>
+      </section>
+
+      {/* Form card */}
+      <section className="mx-auto mt-8 max-w-4xl px-4">
+        <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm md:p-8">
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -74,10 +105,11 @@ export default function ContactPage() {
           {loading ? "Sending..." : "Send"}
         </button>
       </form>
-
-      {/* ✅ Success / Error messages */}
+       {/* ✅ Success / Error messages */}
       {success && <p style={{ color: "green", marginTop: "15px" }}>✅ Your message was sent successfully!</p>}
       {error && <p style={{ color: "red", marginTop: "15px" }}>{error}</p>}
-    </div>
+        </div>
+      </section>
+    </main>
   );
 }
