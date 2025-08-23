@@ -99,7 +99,7 @@ export default function ContactPage() {
                  <div className="flex justify-center gap-0 max-w-xl mx-auto">
                     <input
             type="text"
-            placeholder="Enter your email"
+            placeholder="Model Number"
             value={canonmodel}
             onChange={(e) => setCanmodel(e.target.value)}
             required

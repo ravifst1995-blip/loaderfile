@@ -22,7 +22,7 @@ export default function PrinterSetupSection() {
 
             <div className="mt-6">
               <Link
-                href="/setup"
+                href=""
                 className="inline-flex w-full md:w-auto items-center justify-center rounded-full bg-blue-600 px-8 py-4 text-base md:text-lg font-semibold uppercase tracking-wide text-white transition hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
               >
                 Run Printer Setup
@@ -31,7 +31,7 @@ export default function PrinterSetupSection() {
 
             <p className="mt-4 text-gray-600">
               For Assistance Please{" "}
-              <Link href="/contact-us" className="text-blue-700 underline hover:no-underline">
+              <Link href="#" className="text-blue-700 underline hover:no-underline">
                 Contact Us
               </Link>
             </p>

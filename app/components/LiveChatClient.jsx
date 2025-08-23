@@ -1,0 +1,17 @@
+"use client";
+
+import { LiveChatWidget } from "@livechat/widget-react";
+
+function handleNewEvent(event) {
+  console.log("LiveChatWidget.onNewEvent", event);
+}
+
+export default function LiveChatClient() {
+  return (
+    <LiveChatWidget
+      license="18590484" // replace with your real license ID
+      visibility="maximized"
+      onNewEvent={handleNewEvent}
+    />
+  );
+}
