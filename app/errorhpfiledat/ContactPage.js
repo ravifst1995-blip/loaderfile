@@ -68,11 +68,14 @@ export default function ContactPage() {
             </div>
             <div className="h-10 w-10">
               {/* top-right hp logo placeholder */}
-              <Image
-                src="../../images/hplogo.png"
-                alt="HP"
-                className="h-10 w-10 object-contain"
-              />
+               <Image
+                                    src="/images/hplogo.png"
+                                     alt="HP"
+                                    width={99}
+      height={24}
+                                    priority
+                                       className="h-10 w-10 object-contain"
+                                  />
             </div>
           </div>
 
@@ -80,12 +83,15 @@ export default function ContactPage() {
           <div className="p-4">
             <div className="relative rounded-md border border-gray-200 bg-white p-4">
               {/* Example visual (replace src with your own screenshot if needed) */}
-              <Image
-                src="https://res.cloudinary.com/dqxcmae0m/image/upload/v1754680007/Canon-G3200-All-In-One-Wireless-Supertank-99x52_fhi3ko.jpg"
-                alt="Printer"
-                className="mx-auto h-28 w-auto opacity-80"
-              />
-
+          
+  <Image
+                                    src="/images/hplogo.png"
+                                     alt="HP"
+                                   width={99}
+      height={24}
+                                    priority
+                                       className="h-10 w-10 object-contain"
+                                  />
               <p className="mx-auto mt-6 max-w-2xl text-center text-sm text-gray-700">
                 Printer driver installation has been failed due to fatal error "C0000022" preventing product driver installation.
                 <br />
@@ -95,11 +101,16 @@ export default function ContactPage() {
               {/* Blue assistance footer strip */}
               <div className="mt-6 flex items-center justify-between rounded-md bg-[#1787d6] p-3 text-white">
                 <div className="flex items-center gap-3">
-                  <Image
-                   src="../../images/hplogow.png"
-                    alt="HP"
-                    className="h-6 w-6 invert-0"
-                  />
+           
+                    <Image
+                                    src="/images/hplogo.png"
+                                     alt="HP"
+
+                                    width={172}
+                                    height={40}
+                                    priority
+                                       className="h-10 w-10 object-contain"
+                                  />
                   <span className="text-sm font-medium">24x7 HP Assistance</span>
                 </div>
                 <div className="text-xs opacity-90">Support</div>

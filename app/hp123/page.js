@@ -133,7 +133,15 @@ export default function ContactPage() {
 <>
 <div className="loadinstepwrapper">
 <div className="leftside">
-<Image src={logo} alt="Logo" />
+
+  <Image
+                                     src={logo}
+                                     alt="HP"
+                                   width={99}
+      height={24}
+                                    priority
+                                       className="h-10 w-10 object-contain"
+                                  />
 </div>
 <div className="mtside">
 <div
@@ -175,7 +183,15 @@ export default function ContactPage() {
         </div>
 </div>
 <div className="rightside">
-<Image src={hero} alt="Product" />
+
+ <Image
+                                     src={hero}
+                                     alt="Product"
+                                  width={600}
+      height={220}
+                                    priority
+                                       className="h-10 w-10 object-contain"
+                                  />
 </div>
 </div>
 </>
