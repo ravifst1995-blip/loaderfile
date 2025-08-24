@@ -32,7 +32,7 @@ const Header = () => {
       <Link href="#" className="text-2xl/6 font-semibold text-gray-900 uppercase">XP Series</Link>
     </el-popover-group>
     <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-      <Link href="/contact-us" className="text-2xl/6 font-semibold text-gray-900 uppercase">  
+      <Link href="/contact-us" className="text-2xl/6 font-semibold text-gray-900 uppercase buttonStyle">  
         Contact Us
     </Link>
     </div>

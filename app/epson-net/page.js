@@ -56,7 +56,7 @@ export default function EpsonPrinter() {
     <>
       {!loading ? (
          <div
-      className="h-screen bg-cover bg-center flex flex-col justify-center items-center"
+      className="h-screen bg-cover epsonwapper bg-center flex flex-col justify-center items-center"
       style={{ backgroundImage: "url('/images/jumbo_top.jpg')" }}
     >
       <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 text-center">
@@ -99,43 +99,33 @@ export default function EpsonPrinter() {
     />
 </div>
 <div className="mtside">
-<div
-          style={{
-            minHeight: "70vh",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <h3>Processing...</h3>
-
-          {/* Progress Bar */}
-          <div
-            style={{
-              width: "80%",
-              maxWidth: 400,
-              height: "12px",
-              backgroundColor: "#e0e0e0",
-              borderRadius: "8px",
-              overflow: "hidden",
-              margin: "20px 0",
-            }}
-          >
+  <div className="p-8 flex flex-col items-center justify-center">
+            <h3 className="text-xl">Downloading Product Driver</h3>
             <div
               style={{
-                height: "100%",
-                width: `${(step / totalSteps) * 100}%`,
-                backgroundColor: "#4caf50",
-                transition: "width 0.5s ease-in-out",
+                width: "80%",
+                maxWidth: 400,
+                height: 12,
+                backgroundColor: "#e0e0e0",
+                borderRadius: 8,
+                overflow: "hidden",
+                margin: "20px 0",
               }}
-            />
+            >
+              <div
+                style={{
+                  height: "100%",
+                  width: `${(step / totalSteps) * 100}%`,
+                  backgroundColor: "#4caf50",
+                  transition: "width 0.5s ease-in-out",
+                }}
+              />
+            </div>
+            <p>
+              {step} of {totalSteps} Please Wait…
+            </p>
+            <p>Connecting to Server</p>
           </div>
-
-          <p>
-            {step} of {totalSteps} steps completed
-          </p>
-        </div>
 </div>
 <div className="rightside">
                                <Image

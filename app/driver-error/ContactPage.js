@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function ContactPage() {
@@ -45,6 +46,7 @@ export default function ContactPage() {
     <main className="min-h-screen bg-[#f5f7fb] py-8">
       {/* Return to top bar */}
       <div className="mx-auto max-w-4xl px-4">
+        <Link href="/">
         <details className="group mb-4 w-fit cursor-pointer select-none text-sm font-semibold text-gray-900">
           <summary className="flex items-center gap-2 list-none">
             <span className="inline-block rounded-sm border border-gray-300 bg-white p-1">
@@ -55,6 +57,7 @@ export default function ContactPage() {
             Return To Top
           </summary>
         </details>
+        </Link>
       </div>
 
       {/* Top card: Installing + error preview image */}

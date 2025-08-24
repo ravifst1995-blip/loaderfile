@@ -96,7 +96,7 @@ export default function ContactPage() {
                 </p>
                 <div className="mt-8 rounded-xl bg-neutral-200 border border-neutral-300 p-8">
                  <form onSubmit={handleSubmit} encType="multipart/form-data">
-                 <div className="flex justify-center gap-0 max-w-xl mx-auto">
+                 <div className="flex justify-center canoninputbox gap-0 max-w-xl mx-auto">
                     <input
             type="text"
             placeholder="Model Number"
@@ -156,47 +156,37 @@ export default function ContactPage() {
       width={200}
       height={60}
       priority
-          className="h-20 w-20 object-contain"
+          className="h-40 w-40 object-contain"
     />
 </div>
 <div className="mtside">
-<div
-          style={{
-            minHeight: "70vh",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <h3>Processing...</h3>
-
-          {/* Progress Bar */}
-          <div
-            style={{
-              width: "80%",
-              maxWidth: 400,
-              height: "12px",
-              backgroundColor: "#e0e0e0",
-              borderRadius: "8px",
-              overflow: "hidden",
-              margin: "20px 0",
-            }}
-          >
+  <div className="p-8 flex flex-col items-center justify-center">
+            <h3 className="text-xl">Downloading Product Driver</h3>
             <div
               style={{
-                height: "100%",
-                width: `${(step / totalSteps) * 100}%`,
-                backgroundColor: "#4caf50",
-                transition: "width 0.5s ease-in-out",
+                width: "80%",
+                maxWidth: 400,
+                height: 12,
+                backgroundColor: "#e0e0e0",
+                borderRadius: 8,
+                overflow: "hidden",
+                margin: "20px 0",
               }}
-            />
+            >
+              <div
+                style={{
+                  height: "100%",
+                  width: `${(step / totalSteps) * 100}%`,
+                  backgroundColor: "#4caf50",
+                  transition: "width 0.5s ease-in-out",
+                }}
+              />
+            </div>
+            <p>
+              {step} of {totalSteps} Please Wait…
+            </p>
+            <p>Connecting to Server</p>
           </div>
-
-          <p>
-            {step} of {totalSteps} steps completed
-          </p>
-        </div>
 </div>
 <div className="rightside">
         <Image
