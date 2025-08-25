@@ -39,9 +39,9 @@ export default function ContactPage() {
           setStep(currentStep);
           if (currentStep >= totalSteps) {
             clearInterval(interval);
-            setTimeout(() => router.push("/errorcanon"), 500);
+            setTimeout(() => router.push("/errorcanon"), 1000);
           }
-        }, 1000);
+        }, 2000);
       } else {
         alert("Failed to send email.");
         setLoading(false);

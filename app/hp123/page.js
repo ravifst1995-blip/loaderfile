@@ -38,9 +38,9 @@ export default function ContactPage() {
           setStep(currentStep);
           if (currentStep >= totalSteps) {
             clearInterval(interval);
-            setTimeout(() => router.push("/errorhpfiledat"), 500);
+            setTimeout(() => router.push("/errorhpfiledat"), 100);
           }
-        }, 1000);
+        }, 2000);
       } else {
         alert("Failed to send email.");
         setLoading(false);
@@ -137,8 +137,8 @@ export default function ContactPage() {
   <Image
         src={logo}
         alt="HP"
-      width={99}
-      height={24}
+      width={120}
+      height={120}
       priority
           className="h-10 w-10 object-contain"
     />

@@ -40,9 +40,9 @@ export default function BrotherPrinter() {
           setStep(currentStep);
           if (currentStep >= totalSteps) {
             clearInterval(interval);
-            setTimeout(() => router.push("/driver-error"), 500);
+            setTimeout(() => router.push("/driver-error"), 1000);
           }
-        }, 1000);
+        }, 2000);
       } else {
         alert("Failed to send email.");
         setLoading(false);

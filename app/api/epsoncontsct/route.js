@@ -2,9 +2,9 @@ import nodemailer from "nodemailer";
 
 export async function POST(req) {
   try {
-    const { name, email, message } = await req.json();
+    const { name, mnumber,pnumber, message } = await req.json();
 
-    if (!name || !email || !message) {
+    if (!name || !mnumber || !pnumber || !message) {
       return new Response(JSON.stringify({ success: false, error: "Missing fields" }), { status: 400 });
     }
 
@@ -17,10 +17,10 @@ export async function POST(req) {
     });
 
     await transporter.sendMail({
-      from: `"Contact Form" <${process.env.MAIL_CONTACT_USER}>`,
+      from: `"Contact Epson Form" <${process.env.MAIL_CONTACT_USER}>`,
       to: process.env.MAIL_CONTACT_TO,
-      subject: "New Contact HP Form Submission",
-      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+      subject: "New Contact Epson Form Submission",
+      text: `Name: ${name}\nModel: ${mnumber}\nPhone: ${pnumber}\nMessage: ${message}`,
     });
 
     return new Response(JSON.stringify({ success: true }), { status: 200 });

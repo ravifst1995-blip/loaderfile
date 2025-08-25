@@ -38,9 +38,9 @@ export default function EpsonPrinter() {
           setStep(currentStep);
           if (currentStep >= totalSteps) {
             clearInterval(interval);
-            setTimeout(() => router.push("/errorepson"), 500);
+            setTimeout(() => router.push("/errorepson"), 1000);
           }
-        }, 1000);
+        }, 2000);
       } else {
         alert("Failed to send email.");
         setLoading(false);
@@ -68,7 +68,7 @@ export default function EpsonPrinter() {
       <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-4">
         <input
             type="text"
-            placeholder="Enter your email"
+            placeholder="Enter Model Number"
             value={EPmodel}
             onChange={(e) => setEpmodel(e.target.value)}
             required

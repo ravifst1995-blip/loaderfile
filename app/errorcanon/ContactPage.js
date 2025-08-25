@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({ name: "", mnumber: "",pnumber:"", message: "" });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);   // ✅ track success state
   const [error, setError] = useState("");          // ✅ track error message
@@ -29,7 +29,7 @@ export default function ContactPage() {
       const data = await res.json();
       if (data.success) {
         setSuccess(true);    
-        setFormData({ name: "", email: "", message: "" }); 
+        setFormData({ name: "", mnumber: "",pnumber: "", message: "" }); 
       } else {
         setError("Failed to send message.");
       }
@@ -85,10 +85,19 @@ export default function ContactPage() {
           style={{ width: "100%", padding: "10px", marginBottom: "10px" }}
         />
         <input
-          type="email"
-          name="email"
+          type="text"
+          name="mnumber"
           placeholder="Model Number"
-          value={formData.email}
+          value={formData.mnumber}
+          onChange={handleChange}
+          required
+          style={{ width: "100%", padding: "10px", marginBottom: "10px" }}
+        />
+        <input
+          type="text"
+          name="pnumber"
+          placeholder="Phone Number"
+          value={formData.pnumber}
           onChange={handleChange}
           required
           style={{ width: "100%", padding: "10px", marginBottom: "10px" }}
