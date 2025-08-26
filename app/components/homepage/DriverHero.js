@@ -29,11 +29,11 @@ export default function DriverHero() {
           DOWNLOAD YOUR PRINTER DRIVER
         </h1>
 
-        <p className="mt-6 pb-9 text-5xl md:text-5xl styleBottom1 font-bold text-blue-700">
+        <p className="mt-6 pb-1 text-5xl md:text-5xl styleBottom1 font-bold text-blue-700">
           Select Your Printer Brand
         </p>
 
-        <ul className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6 justify-items-center">
+        <ul className="mt-10 grid errorrand grid-cols-2 sm:grid-cols-4 gap-6 justify-items-center">
           {brands.map((b) => (
             <li key={b.name} className="w-full max-w-[220px]">
               <Link

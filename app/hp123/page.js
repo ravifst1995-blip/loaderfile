@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
+import Footer from "../components/footer";
 
 
   const logo = "/images/hp-logo.webp";
@@ -55,6 +56,7 @@ export default function ContactPage() {
   return (
     <>
       {!loading ? (
+        <>
         <main
           style={{
             minHeight: "100dvh",
@@ -63,7 +65,7 @@ export default function ContactPage() {
             background: "#f9fafb",
           }}
         >
-          <div
+          <div className="mobileMedia"
             style={{
               width: "100%",
               maxWidth: 1200,
@@ -127,6 +129,8 @@ export default function ContactPage() {
             </section>
           </div>
         </main>
+        <Footer />
+        </>
       ) : (
         
 
@@ -137,10 +141,10 @@ export default function ContactPage() {
   <Image
         src={logo}
         alt="HP"
-      width={120}
-      height={120}
+      width={200}
+      height={200}
       priority
-          className="h-10 w-10 object-contain"
+          className="h-20 w-20 object-contain"
     />
 </div>
 <div className="mtside">
@@ -176,7 +180,7 @@ export default function ContactPage() {
                                <Image
                                      src={hero}
                                      alt="Product"
-                                  width={708}
+                                  width={500}
                                 height={395}
                                     priority
                                        className=" object-contain"

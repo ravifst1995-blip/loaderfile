@@ -9,6 +9,7 @@ import SupportCopySection from "./components/homepage/SupportCopySection";
 // const hero = "/images/gif.gif";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Footer from "./components/footer";
 
 export default function Home() {
   const router = useRouter();
@@ -197,7 +198,7 @@ export default function Home() {
         </div>
       )}
 
-     
+       <Footer />
     </>
   );
 }

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
+import Footer from "../components/footer";
 
 
   const logo = "/images/EPSON-1.png";
@@ -55,6 +56,7 @@ export default function EpsonPrinter() {
   return (
     <>
       {!loading ? (
+        <>
          <div
       className="h-screen bg-cover epsonwapper bg-center flex flex-col justify-center items-center"
       style={{ backgroundImage: "url('/images/jumbo_top.jpg')" }}
@@ -82,6 +84,8 @@ export default function EpsonPrinter() {
         </button>
       </form>
     </div>
+    <Footer />
+    </>
       ) : (
         
 
@@ -91,9 +95,9 @@ export default function EpsonPrinter() {
 
   <Image
         src={logo}
-        alt="HP"
-      width={99}
-      height={24}
+        alt="epson"
+      width={200}
+      height={200}
       priority
           className=" object-contain"
     />
@@ -131,7 +135,7 @@ export default function EpsonPrinter() {
                                <Image
                                      src={hero}
                                      alt="Product"
-                                  width={708}
+                                  width={500}
                                 height={395}
                                     priority
                                        className=" object-contain"

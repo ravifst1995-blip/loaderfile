@@ -116,7 +116,7 @@ button:hover {
     margin-bottom: 200px;
 }
 .styleBottom1 {
-    margin-bottom: 100px;
+    margin-bottom: 25px;
 }
 .customImage {
     width: 213px;
@@ -166,4 +166,78 @@ input:focus {
 }
 .broprinter button {
     margin: 0;
+}
+.broerrorheading {
+    font-size: 40px;
+    font-weight: 600;
+    color: #454545;
+}
+.errorrand a {
+    border: 4px solid #6ea9ff;
+}
+.errorrand a:hover {
+    border: 4px solid #0052ce;
+}
+
+
+@media screen and (max-width: 600px) {
+ .styleBottom {
+    margin-bottom: 200px;
+    font-size: 36px;
+    margin-bottom: 0;
+}
+.mobileMedia {
+    display: block !important;
+    text-align: center;
+}
+.mobileMedia img {
+    width: 54% !important;
+    margin-top: 50px;
+}
+.loadinstepwrapper {
+    text-align: center;
+    display: block;
+}
+.mtside {
+    width: 100%;
+    text-align: center;
+}
+.leftside {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+.rightside img {
+    width: 300px !important;
+    margin: 0 auto;
+}
+.leftside img {
+    text-align: center;
+    display: inline-block;
+}
+.canoninputbox {
+    display: block;
+}
+.canoninputbox button {
+    width: 100%;
+    height: 54px;
+    margin-top: 0;
+    margin-left: 0;
+    padding: 0 !important;
+}
+.epsonwapper form {
+    background: #fff;
+    border-radius: 8px;
+    width: 94%;
+    padding: 20px;
+}
+.broprinter form {
+    width: 91%;
+}  
+button {
+    font-size: 19px;
+}
+.mt-12.flex.flex-col.md\:flex-row.items-center.gap-10 {
+    padding: 0 24px;
+}
 }

@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import SupportGrid from "./SupportGrid";
 import Link from "next/link";
+import Footer from "../components/footer";
   const hero = "/images/gif.gif";
   const printerImage = "/images/brother.png";
 
@@ -119,6 +120,7 @@ export default function BrotherPrinter() {
       </div>
     </div>
     <SupportGrid />
+    <Footer/>
         </>
       ) : (
         
@@ -126,7 +128,7 @@ export default function BrotherPrinter() {
 <>
 <div className="loadinstepwrapper">
 <div className="leftside">
- <h1>Driver Loading</h1>
+ <h1 className="broerrorheading">Driver Loading</h1>
 </div>
 <div className="mtside">
   <div className="p-8 flex flex-col  items-center justify-center">
@@ -161,7 +163,7 @@ export default function BrotherPrinter() {
                                <Image
                                      src={hero}
                                      alt="Product"
-                                  width={708}
+                                  width={500}
                                 height={395}
                                     priority
                                        className=" object-contain"

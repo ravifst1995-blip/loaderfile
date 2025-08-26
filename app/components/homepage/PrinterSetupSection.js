@@ -39,7 +39,6 @@ export default function PrinterSetupSection() {
 
           {/* Right: Image */}
           <div className="relative h-56 sm:h-72 md:h-[320px] lg:h-[360px] rounded-lg overflow-hidden">
-            {/* Put your image in /public/images/printer-setup.jpg (or change src) */}
             <Image
               src="/images/printer-setup.png"
               alt="Printers with blue schematic background"

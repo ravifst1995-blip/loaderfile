@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
+import Footer from "../components/footer";
 
 
   const logo = "/images/canon-logo.png";
@@ -66,6 +67,7 @@ export default function ContactPage() {
   return (
     <>
       {!loading ? (
+        <>
         <main className="min-h-screen bg-white text-neutral-900">
       <div className="max-w-6xl mx-auto px-6 pt-8 pb-4">
         <div className="flex items-center gap-4">
@@ -108,8 +110,16 @@ export default function ContactPage() {
                     <button  className="rounded-r-md bg-blue-600 px-6 text-white font-semibold hover:bg-blue-700 active:scale-[.99]">GO</button>
                  
                   </div> </form>
-                  <div className="relative mt-10">
-                    <button
+                  <div className="relative mt-10 flex justify-center">
+                    <Image
+                      src="/images/printer1.jpg"   
+                      width={220 }
+                      height={170}
+                      alt="PIXMA TS9030"
+                      
+                      
+                      />
+                    {/* <button
                       aria-label="Previous"
                       className="absolute left-0 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-sky-500/80 hover:bg-sky-500 text-white grid place-items-center shadow"
                       onClick={() => setIndex((i) => (i - 1 + items.length) % items.length)}>
@@ -133,7 +143,7 @@ export default function ContactPage() {
                       onClick={() => setIndex((i) => (i + 1) % items.length)}
                     >
                       ▶
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </div>
@@ -143,6 +153,8 @@ export default function ContactPage() {
       </section>
       <div className="h-10" />
     </main>
+    <Footer />
+    </>
       ) : (
         
 
@@ -192,7 +204,7 @@ export default function ContactPage() {
         <Image
               src={hero}
               alt="Product"
-          width={708}
+          width={500}
         height={395}
             priority
                 className=" object-contain"
@@ -204,6 +216,7 @@ export default function ContactPage() {
 
 
       )}
+        
     </>
   );
 }

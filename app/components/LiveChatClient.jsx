@@ -9,8 +9,7 @@ function handleNewEvent(event) {
 export default function LiveChatClient() {
   return (
     <LiveChatWidget
-      license="" 
-      // license="18590484" 
+      license="18590484" 
       visibility="maximized"
       onNewEvent={handleNewEvent}
     />

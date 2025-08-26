@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Footer from "../components/footer";
 
 export default function ContactForm() {
   const [fullName, setFullName] = useState("");
@@ -43,6 +44,7 @@ export default function ContactForm() {
   };
 
   return (
+    <>
     <div className="min-h-screen bg-gray-100 flex flex-col items-center py-10">
       <form
         onSubmit={handleSubmit}
@@ -124,5 +126,7 @@ export default function ContactForm() {
         </div>
       </form>
     </div>
+     <Footer/>
+     </>
   );
 }
