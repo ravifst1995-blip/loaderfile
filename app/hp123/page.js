@@ -105,8 +105,8 @@ export default function ContactPage() {
                     marginBottom: "10px",
                   }}
                 />
-                <button type="submit" style={{ padding: "10px 20px" }}>
-                  Submit
+                <button type="submit" style={{ padding: "10px 70px", fontWeight:"700" }}>
+                  GO
                 </button>
               </form>
               <div

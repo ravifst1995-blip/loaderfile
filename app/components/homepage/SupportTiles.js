@@ -3,12 +3,12 @@
 import Link from "next/link";
 
 const tiles = [
-  { title: "Software and Drivers", href: "/drivers", bg: "bg-indigo-500" },
-  { title: "Solution Center", href: "/solutions", bg: "bg-indigo-500"
+  { title: "Software and Drivers", href: "/contact-us", bg: "bg-indigo-500" },
+  { title: "Solution Center", href: "/contact-us", bg: "bg-indigo-500"
     // image: "/images/solution.jpg" 
 
   },
-  { title: "Diagnostic Tools to fix issue", href: "/diagnostics",bg: "bg-indigo-500" },
+  { title: "Diagnostic Tools to fix issue", href: "/contact-us",bg: "bg-indigo-500" },
 ];
 
 export default function SupportTiles() {
