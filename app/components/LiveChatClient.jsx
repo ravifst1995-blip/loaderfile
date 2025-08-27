@@ -7,6 +7,6 @@ import { LiveChatWidget } from "@livechat/widget-react";
 
 export default function LiveChatClient() {
   return (
-   <LiveChatWidget license="19228491" />
+   <LiveChatWidget license="19228490" />
   );
 }
