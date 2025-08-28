@@ -10,7 +10,9 @@ import SupportCopySection from "./components/homepage/SupportCopySection";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Footer from "./components/footer";
-
+export const metadata = {
+  title: "Printer Support",
+};
 export default function Home() {
   const router = useRouter();
 

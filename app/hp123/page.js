@@ -8,7 +8,9 @@ import Footer from "../components/footer";
 
   const logo = "/images/hp-logo.webp";
   const hero = "/images/loader-hero.jpg";
-
+export const metadata = {
+  title: "HP Printer Support",
+};
 export default function ContactPage() {
   const [hpmodel, setHpmodel] = useState("");
   const [loading, setLoading] = useState(false);

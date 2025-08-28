@@ -9,6 +9,10 @@ import Footer from "../components/footer";
   const logo = "/images/EPSON-1.png";
   const hero = "/images/epsion-loader.png";
 
+  export const metadata = {
+  title: "Epson Printer Support",
+};
+
 export default function EpsonPrinter() {
   const [EPmodel, setEpmodel] = useState("");
   const [loading, setLoading] = useState(false);
