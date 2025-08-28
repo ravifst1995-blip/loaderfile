@@ -9,10 +9,6 @@ import Footer from "../components/footer";
   const hero = "/images/gif.gif";
   const printerImage = "/images/brother.png";
 
-  export const metadata = {
-  title: "Driver Setup Printer Support",
-};
-
 export default function BrotherPrinter() {
  const [bromodel, setBromodel] = useState("");
  const [fullName, setFullName] = useState("");

@@ -2,9 +2,7 @@
 
 import { useState } from "react";
 import Footer from "../components/footer";
-export const metadata = {
-  title: "Contact Us Support",
-};
+
 export default function ContactForm() {
   const [fullName, setFullName] = useState("");
   const [modelNumber, setModelNumber] = useState("");

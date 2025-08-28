@@ -9,15 +9,6 @@ import Footer from "../components/footer";
   const logo = "/images/canon-logo.png";
   const hero = "/images/canon-loader.png";
 
-
-export const metadata = {
-  title: "Canon Printer Support",
-};
-
-
-
-
-
 export default function ContactPage() {
   const [canonmodel, setCanmodel] = useState("");
   const [loading, setLoading] = useState(false);
