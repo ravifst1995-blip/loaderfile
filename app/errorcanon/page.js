@@ -1,5 +1,8 @@
 import Footer from "../components/footer";
 import ContactPage from "./ContactPage";
+export const metadata = {
+  title: "Error Canon Printer Support",
+};
 
 export default function SuccessPage() {
   return (
