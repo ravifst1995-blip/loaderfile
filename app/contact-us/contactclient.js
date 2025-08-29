@@ -5,7 +5,7 @@
 import { useState } from "react";
 import Footer from "../components/footer";
 
-export default function ContactForm() {
+export default function Contactpage() {
   const [fullName, setFullName] = useState("");
   const [modelNumber, setModelNumber] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");

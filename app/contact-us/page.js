@@ -1,4 +1,5 @@
-import ContactForm from "./ContactClient";
+import Contactpage from "./contactclient";
+
 
 
 
@@ -9,9 +10,9 @@ export const metadata = {
 
 
 
-export default function ContactPage() {
+export default function ContactPagemain() {
   return 
-   <ContactForm />
+  <Contactpage />
   ;   
 }
 
