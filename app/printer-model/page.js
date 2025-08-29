@@ -1,20 +1,18 @@
 import CanonPage from "./canonmain";
 
-
 export const metadata = {
-  title: "HP Printer Support",
+  title: "Canon Printer Support",
 };
-
-export default function CanonMainPage() {
-  return 
-     <CanonPage />
-  ;   
+const page = () => {
+  return (
+   <>
+   <CanonPage />
+    
+   </>
+  );
 }
 
-
-
-
-
+export default page;
 
 
 
